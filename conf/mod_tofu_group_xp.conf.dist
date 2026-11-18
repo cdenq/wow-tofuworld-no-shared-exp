@@ -1,0 +1,26 @@
+[worldserver]
+
+########################################
+# mod-tofu-group-xp (Tofu Worldview)
+########################################
+#
+#    TofuGroupXp.Enable
+#        Description: In a group, every member who gets kill XP at all gets the XP they would get killing the mob alone: no split between members, no group bonus, and no halving when a member finds the mob gray.
+#            Unchanged: solo kills, battlegrounds, PvP, dead members, members above the highest level for whom the mob is not gray (0 XP, as stock), pets (half of the owner's XP in a group, as stock), rested XP, and XP auras.
+#            Other modules' XP rules (progression level caps, mod-individual-xp, challenge modes, playerbots' bot XP rate) still apply on top.
+#        Default:     1 - Enabled
+#                     0 - Disabled (stock group XP)
+#
+
+TofuGroupXp.Enable = 1
+
+#
+#    TofuGroupXp.Extrapolate
+#        Description: For a grouped member killing a mob 5 or more levels above them, continue the XP formula past the stock +4 level cap instead of capping it.
+#            Example at Rate.XP.Kill = 1: a level 1 grouped with a level 80 gets about 2,896 XP for a normal level 80 Northrend mob (702 with the cap; about 12 with stock group XP).
+#            Solo kills always keep the stock cap.
+#        Default:     1 - Enabled
+#                     0 - Disabled (the gap is capped at +4 as stock)
+#
+
+TofuGroupXp.Extrapolate = 1
